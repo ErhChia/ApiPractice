@@ -15,7 +15,7 @@ class SpringApiPracticeApplicationTests {
 
     @Test
     fun contextLoads() {
-        val resourceUrl = "https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?\$format=JSON"
+        val resourceUrl = "http://gis.taiwan.net.tw/XMLReleaseALL_public/scenic_spot_C_f.json"
         val obj = URL(resourceUrl)
 
         with(obj.openConnection() as HttpURLConnection) {
