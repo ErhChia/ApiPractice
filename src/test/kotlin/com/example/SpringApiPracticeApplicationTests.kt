@@ -24,9 +24,9 @@ class SpringApiPracticeApplicationTests {
     @Throws(ClientProtocolException::class, IOException::class)
     fun contextLoads() {
 
-        val acceptingTrustStategy = { _: Array<X509Certificate>, _: String -> true }
+        val acceptingTrustStrategy = { _: Array<X509Certificate>, _: String -> true }
         val sslContext = SSLContexts.custom()
-                .loadTrustMaterial(null, acceptingTrustStategy).build()
+                .loadTrustMaterial(null, acceptingTrustStrategy).build()
         val csf = SSLConnectionSocketFactory(sslContext)
 
         val resourceUrl = "https://gis.taiwan.net.tw/XMLReleaseALL_public/scenic_spot_C_f.json"
