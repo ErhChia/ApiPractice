@@ -1,10 +1,13 @@
 package com.example
 
+import com.example.domain.TravelInformation
+import com.google.gson.Gson
 import org.apache.http.client.ClientProtocolException
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory
 import org.apache.http.impl.client.HttpClients
 import org.apache.http.ssl.SSLContexts
 import org.assertj.core.api.Assertions.assertThat
+import org.json.JSONObject
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.springframework.boot.test.context.SpringBootTest
@@ -39,6 +42,15 @@ class SpringApiPracticeApplicationTests {
                 .exchange(resourceUrl, HttpMethod.GET, null, String::class.java)
 
         assertThat(response.statusCode).isEqualTo(OK)
+
+        val jsonObj = JSONObject(response.body)
+        val jsonDataString = jsonObj.getJSONObject("XML_Head").getJSONObject("Infos")
+                .getJSONArray("Info").get(0).toString()
+
+
+        val data: TravelInformation = Gson().fromJson(jsonDataString, TravelInformation::class.java)
+
+        print(response.statusCode)
 
     }
 
