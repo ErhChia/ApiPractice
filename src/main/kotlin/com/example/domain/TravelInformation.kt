@@ -19,119 +19,119 @@ data class TravelInformation(
          */
         @Id
         @Column(name = "id_")
-        val Id: String,
+        var id: String,
 
         /**
          * 景點名稱
          */
         @Column(name = "name_")
-        val Name: String,
+        var name: String,
 
         /**
          *
          */
         @Column(name = "zone_")
-        val Zone: String,
+        var zone: String,
 
         /**
          * 景點簡述
          */
         @Column(name = "toldescribe_")
-        val Toldescribe: String,
+        var toldescribe: String,
 
         /**
          * 景點描述
          */
         @Column(name = "description_")
-        val Description: String,
+        var description: String,
 
         /**
          * 景點電話
          */
         @Column(name = "tel_")
-        val Tel: String,
+        var tel: String,
 
         /**
          * 景點地址
          */
         @Column(name = "add_")
-        val Add: String,
+        var add: String,
 
         @Column(name = "zipcode_")
-        val Zipcode: String,
+        var zipcode: String,
 
         @Column(name = "travelling_info_")
-        val Travellinginfo: String,
+        var travellingInfo: String,
 
         @Column(name = "open_time_")
-        val Opentime: String,
+        var openTime: String,
 
         @Column(name = "picture1_")
-        val Picture1: String,
+        var picture1: String,
 
         @Column(name = "pic_describe1_")
-        val Picdescribe1: String,
+        var picDescribe1: String,
 
         @Column(name = "picture2_")
-        val Picture2: String,
+        var picture2: String,
 
         @Column(name = "pic_describe2_")
-        val Picdescribe2: String,
+        var picDescribe2: String,
 
         @Column(name = "picture3_")
-        val Picture3: String,
+        var picture3: String,
 
         @Column(name = "pic_describe3_")
-        val Picdescribe3: String,
+        var picDescribe3: String,
 
         @Column(name = "map_")
-        val Map: String,
+        var map: String,
 
         @Column(name = "gov_")
-        val Gov: String,
+        var gov: String,
 
         @Column(name = "px_")
-        val Px: Double,
+        var px: Double,
 
         @Column(name = "py_")
-        val Py: Double,
+        var py: Double,
 
         @Column(name = "org_class_")
-        val Orgclass: String,
+        var orgClass: String,
 
         @Column(name = "class1_")
-        val Class1: String,
+        var class1: String,
 
         @Column(name = "class2_")
-        val Class2: String,
+        var class2: String,
 
         @Column(name = "class3_")
-        val Class3: String,
+        var class3: String,
 
         @Column(name = "level_")
-        val Level: String,
+        var level: String,
 
         @Column(name = "website_")
-        val Website: String,
+        var website: String,
 
         @Column(name = "parking_info_")
-        val Parkinginfo: String,
+        var parkingInfo: String,
 
         @Column(name = "parking_info_px_")
-        val Parkinginfo_Px: Double,
+        var parkingInfoPx: Double,
 
         @Column(name = "parking_info_py_")
-        val Parkinginfo_Py: Double,
+        var parkingInfoPy: Double,
 
         @Column(name = "ticket_info_")
-        val Ticketinfo: String,
+        var ticketInfo: String,
 
         @Column(name = "remarks_")
-        val Remarks: String,
+        var remarks: String,
 
         @Column(name = "keyword_")
-        val Keyword: String,
+        var keyword: String,
 
         @Column(name = "change_time_")
-        val Changetime: String
+        var changeTime: String
 )

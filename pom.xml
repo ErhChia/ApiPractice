@@ -100,6 +100,11 @@
             <artifactId>commons-codec</artifactId>
             <version>20041127.091804</version>
         </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20131018</version>
+        </dependency>
     </dependencies>
 
     <build>
