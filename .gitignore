@@ -20,3 +20,5 @@
 target/
 .mvn/*
 mvn*
+
+files/

@@ -1,6 +1,7 @@
 package com.example.service
 
 import com.example.domain.TravelInformation
+import org.json.JSONObject
 
 /**
  *
@@ -8,6 +9,8 @@ import com.example.domain.TravelInformation
  */
 interface TravelInformationService {
 
-    fun setData()
+    fun setData(jsonObject: JSONObject)
+    fun getData(): JSONObject
     fun save(data: TravelInformation)
+    fun output(jsonObject: JSONObject)
 }

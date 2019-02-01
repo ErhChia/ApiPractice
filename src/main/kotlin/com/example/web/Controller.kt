@@ -24,7 +24,13 @@ class Controller(val travelInformationService: TravelInformationServiceImpl) {
     @GetMapping("test")
     fun test(model: Model): String {
 
-        travelInformationService.setData()
+        val jsonObject = travelInformationService.getData()
+//        System.err.println(jsonObject)
+        if (jsonObject.length() != 0)
+            travelInformationService.output(jsonObject)
+//            System.err.println("json object is null")
+//        travelInformationService.setData(jsonObject)
+
 
         model.addAttribute("name", "Jack")
         return "test"
