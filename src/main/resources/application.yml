@@ -18,3 +18,8 @@ spring:
     generate-ddl: true
     show-sql: false
     database-platform: org.hibernate.dialect.H2Dialect
+
+  freemarker:
+    enabled: true
+    prefix: main/
+    suffix: .ftl
