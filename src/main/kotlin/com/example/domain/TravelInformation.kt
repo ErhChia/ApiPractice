@@ -30,19 +30,19 @@ data class TravelInformation(
         /**
          *
          */
-        @Column(name = "zone_")
+        @Column(name = "zone_", length = 4000)
         var zone: String,
 
         /**
          * 景點簡述
          */
-        @Column(name = "toldescribe_")
+        @Column(name = "toldescribe_", length = 4000)
         var toldescribe: String,
 
         /**
          * 景點描述
          */
-        @Column(name = "description_")
+        @Column(name = "description_", length = 4000)
         var description: String,
 
         /**
@@ -54,37 +54,37 @@ data class TravelInformation(
         /**
          * 景點地址
          */
-        @Column(name = "add_")
+        @Column(name = "add_", length = 1000)
         var add: String,
 
         @Column(name = "zipcode_")
         var zipcode: String,
 
-        @Column(name = "travelling_info_")
-        var travellingInfo: String,
+        @Column(name = "travelling_info_", length = 4000)
+        var travellinginfo: String,
 
-        @Column(name = "open_time_")
-        var openTime: String,
+        @Column(name = "open_time_", length = 4000)
+        var opentime: String,
 
-        @Column(name = "picture1_")
+        @Column(name = "picture1_", length = 4000)
         var picture1: String,
 
-        @Column(name = "pic_describe1_")
-        var picDescribe1: String,
+        @Column(name = "pic_describe1_", length = 4000)
+        var picdescribe1: String,
 
-        @Column(name = "picture2_")
+        @Column(name = "picture2_", length = 4000)
         var picture2: String,
 
-        @Column(name = "pic_describe2_")
-        var picDescribe2: String,
+        @Column(name = "pic_describe2_", length = 4000)
+        var picdescribe2: String,
 
-        @Column(name = "picture3_")
+        @Column(name = "picture3_", length = 4000)
         var picture3: String,
 
-        @Column(name = "pic_describe3_")
-        var picDescribe3: String,
+        @Column(name = "pic_describe3_", length = 4000)
+        var picdescribe3: String,
 
-        @Column(name = "map_")
+        @Column(name = "map_", length = 4000)
         var map: String,
 
         @Column(name = "gov_")
@@ -96,42 +96,42 @@ data class TravelInformation(
         @Column(name = "py_")
         var py: Double,
 
-        @Column(name = "org_class_")
-        var orgClass: String,
+        @Column(name = "org_class_", length = 4000)
+        var orgclass: String,
 
-        @Column(name = "class1_")
+        @Column(name = "class1_", length = 4000)
         var class1: String,
 
-        @Column(name = "class2_")
+        @Column(name = "class2_", length = 4000)
         var class2: String,
 
-        @Column(name = "class3_")
+        @Column(name = "class3_", length = 4000)
         var class3: String,
 
-        @Column(name = "level_")
+        @Column(name = "level_", length = 4000)
         var level: String,
 
-        @Column(name = "website_")
+        @Column(name = "website_", length = 4000)
         var website: String,
 
-        @Column(name = "parking_info_")
-        var parkingInfo: String,
+        @Column(name = "parking_info_", length = 4000)
+        var parkinginfo: String,
 
         @Column(name = "parking_info_px_")
-        var parkingInfoPx: Double,
+        var parkinginfo_px: Double,
 
         @Column(name = "parking_info_py_")
-        var parkingInfoPy: Double,
+        var parkinginfo_py: Double,
 
-        @Column(name = "ticket_info_")
-        var ticketInfo: String,
+        @Column(name = "ticket_info_", length = 4000)
+        var ticketinfo: String,
 
-        @Column(name = "remarks_")
+        @Column(name = "remarks_", length = 4000)
         var remarks: String,
 
-        @Column(name = "keyword_")
+        @Column(name = "keyword_", length = 4000)
         var keyword: String,
 
-        @Column(name = "change_time_")
-        var changeTime: String
+        @Column(name = "change_time_", length = 4000)
+        var changetime: String
 )

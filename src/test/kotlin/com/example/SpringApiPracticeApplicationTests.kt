@@ -25,7 +25,7 @@ import java.security.cert.X509Certificate
 
 @RunWith(SpringRunner::class)
 @SpringBootTest
-class SpringApiPracticeApplicationTests() {
+class SpringApiPracticeApplicationTests {
 
     @Test
     @Throws(ClientProtocolException::class, IOException::class)

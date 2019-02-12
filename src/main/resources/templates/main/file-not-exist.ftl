@@ -3,10 +3,10 @@
 <html lang="en">
 <head>
     <title>redirect</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(function () {
             var redirect = 5;
@@ -25,7 +25,7 @@
 </head>
 <body>
 <div class="col-md-12">
-    <p class="alert alert-success col-md-2">Fetch success!</p>
+    <p class="alert alert-danger col-md-2">File Not Exist!</p>
 </div>
 <div class="col-md-12">
     <p class="content"></p>

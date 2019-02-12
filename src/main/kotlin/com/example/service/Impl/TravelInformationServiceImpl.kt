@@ -38,48 +38,48 @@ class TravelInformationServiceImpl(val travelInformationRepository: TravelInform
         val jsonArray = jsonObject.getJSONObject("XML_Head")
                 .getJSONObject("Infos")
                 .getJSONArray("Info")
-        lateinit var data: TravelInformation
+//        lateinit var data: TravelInformation
 
 //        for (index in 0 until jsonArray.length()) {
-        val obj = jsonArray.getJSONObject(0)
-
-        data = TravelInformation(
-                obj.getString("Id"),
-                obj.getString("Name"),
-                obj.getString("Zone"),
-                obj.getString("Toldescribe"),
-                obj.getString("Description"),
-                obj.getString("Tel"),
-                obj.getString("Add"),
-                obj.getString("Zipcode"),
-                obj.getString("Travellinginfo"),
-                obj.getString("Opentime"),
-                obj.getString("Picture1"),
-                obj.getString("Picdescribe1"),
-                obj.getString("Picture2"),
-                obj.getString("Picdescribe2"),
-                obj.getString("Picture3"),
-                obj.getString("Picdescribe3"),
-                obj.getString("Map"),
-                obj.getString("Gov"),
-                obj.getDouble("Px"),
-                obj.getDouble("Py"),
-                obj.getString("Orgclass"),
-                obj.getString("Class1"),
-                obj.getString("Class2"),
-                obj.getString("Class3"),
-                obj.getString("Level"),
-                obj.getString("Website"),
-                obj.getString("Parkinginfo"),
-                obj.getDouble("Parkinginfo_Px"),
-                obj.getDouble("Parkinginfo_Py"),
-                obj.getString("Ticketinfo"),
-                obj.getString("Remarks"),
-                obj.getString("Keyword"),
-                obj.getString("Changetime")
-        )
-
-        save(data)
+//        val obj = jsonArray.getJSONObject(0)
+//
+//        data = TravelInformation(
+//                obj.getString("Id"),
+//                obj.getString("Name"),
+//                obj.getString("Zone"),
+//                obj.getString("Toldescribe"),
+//                obj.getString("Description"),
+//                obj.getString("Tel"),
+//                obj.getString("Add"),
+//                obj.getString("Zipcode"),
+//                obj.getString("Travellinginfo"),
+//                obj.getString("Opentime"),
+//                obj.getString("Picture1"),
+//                obj.getString("Picdescribe1"),
+//                obj.getString("Picture2"),
+//                obj.getString("Picdescribe2"),
+//                obj.getString("Picture3"),
+//                obj.getString("Picdescribe3"),
+//                obj.getString("Map"),
+//                obj.getString("Gov"),
+//                obj.getDouble("Px"),
+//                obj.getDouble("Py"),
+//                obj.getString("Orgclass"),
+//                obj.getString("Class1"),
+//                obj.getString("Class2"),
+//                obj.getString("Class3"),
+//                obj.getString("Level"),
+//                obj.getString("Website"),
+//                obj.getString("Parkinginfo"),
+//                obj.getDouble("Parkinginfo_Px"),
+//                obj.getDouble("Parkinginfo_Py"),
+//                obj.getString("Ticketinfo"),
+//                obj.getString("Remarks"),
+//                obj.getString("Keyword"),
+//                obj.getString("Changetime")
+//        )
+//
+//        save(data)
 //        }
 
     }
@@ -116,12 +116,16 @@ class TravelInformationServiceImpl(val travelInformationRepository: TravelInform
             if (!File("files/").exists())
                 File("files/").mkdir()
             val file = File("files/test.csv")
-            val string = CDL.toString(jsonArray)
+            val string = CDL.toString(jsonArray).toLowerCase()
             FileUtils.write(file, string, "UTF-8", false)
         } catch (e: JSONException) {
             e.printStackTrace()
         } catch (e: IOException) {
             e.printStackTrace()
         }
+    }
+
+    override fun saveFromCsv(data: List<TravelInformation>) {
+        data.forEach { save(it) }
     }
 }

@@ -13,4 +13,5 @@ interface TravelInformationService {
     fun getData(): JSONObject
     fun save(data: TravelInformation)
     fun output(jsonObject: JSONObject)
+    fun saveFromCsv(data: List<TravelInformation>)
 }
