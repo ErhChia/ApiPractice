@@ -38,6 +38,7 @@ class TravelInformationServiceImpl(val travelInformationRepository: TravelInform
         val jsonArray = jsonObject.getJSONObject("XML_Head")
                 .getJSONObject("Infos")
                 .getJSONArray("Info")
+        //TODO:garbage code
 //        lateinit var data: TravelInformation
 
 //        for (index in 0 until jsonArray.length()) {
@@ -90,7 +91,7 @@ class TravelInformationServiceImpl(val travelInformationRepository: TravelInform
         val sslContext = SSLContexts.custom()
                 .loadTrustMaterial(null, acceptingTrustStrategy).build()
         val csf = SSLConnectionSocketFactory(sslContext)
-
+        //TODO:可考慮抽出至properties檔，專案上較彈性
         val resourceUrl = "https://gis.taiwan.net.tw/XMLReleaseALL_public/scenic_spot_C_f.json"
         val httpClient = HttpClients.custom()
                 .setSSLSocketFactory(csf).build()
@@ -111,6 +112,25 @@ class TravelInformationServiceImpl(val travelInformationRepository: TravelInform
         val jsonArray = jsonObject.getJSONObject("XML_Head")
                 .getJSONObject("Infos")
                 .getJSONArray("Info")
+        //FIXME:多餘try/catch，try/catch耗費效能，應適當使用
+        /*
+        資料流使用上若有需要關閉標準try/catch應使用finally
+        FileWriter fw = null;
+        try {
+        fw = new FileWriter(new File(path));
+        } catch (Exception e) {
+        e.printStackTrace();
+        } finally {
+        if (fw != null) {
+        try {
+        fw.close();
+        } catch (Exception e) {
+        e.printStackTrace();
+        }
+        }
+        }
+        */
+
 
         try {
             if (!File("files/").exists())

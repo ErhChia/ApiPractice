@@ -59,10 +59,10 @@ data class TravelInformation(
 
         @Column(name = "zipcode_")
         var zipcode: String,
-
+        //FIXME:命名規則，以下其他同樣處理
         @Column(name = "travelling_info_", length = 4000)
         var travellinginfo: String,
-
+        //TODO:時間欄位使用對應欄位，String是易受攻擊的屬性時間能力上許可應盡量使用其他型態
         @Column(name = "open_time_", length = 4000)
         var opentime: String,
 
